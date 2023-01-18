@@ -25,7 +25,15 @@
 - iniTagsInt
 - iniTagsAnalog
 
-### 2. Создание скрипта TagsAlmSource01( ) в QuickFunctions  
+### 2. Добавление файла iniTags.csv в инициализацию Интача
+*Копируем файл iniTags.csv в папку Variables в проекте*
+
+*В Application Script (Startup) добавляем строчку*
+```python
+IF SLOAD("iniTags.csv", 1 ) <> 0 THEN		stdInit = 1; ELSE	stdInit = -1; MessageBox( "Не найден файл инициализации iniTags.csv!", "Ошибка инициализации",  0 );		ENDIF;
+``` 
+
+### 3. Создание скрипта TagsAlmSource01( ) в QuickFunctions  
   
 ```python
   TT03_Mode.AlarmUserDefNum2 = CALL TagsAlmAnalogNewPlc( 24, 14, 0, TT03_Mode.Quality, TT03_Mode, TT03_Mode.AlarmUserDefNum2, TT03_LoLo, TT03_Lo, TT03_Hi, TT03_HiHi, TT03, TT03_Settings);
