@@ -26,10 +26,13 @@
 - iniTagsAnalog
 
 ### 2. Создание скрипта TagsAlmSource01( ) в QuickFunctions  
-  TT03_Mode.AlarmUserDefNum2 = CALL TagsAlmAnalogNewPlc( 24, 14, 0, TT03_Mode.Quality, TT03_Mode, TT03_Mode.AlarmUserDefNum2, TT03_LoLo, TT03_Lo, TT03_Hi, TT03_HiHi, TT03, TT03_Settings);
   
-  TagsAlmAnalogNewPlc(PARAM, TYPE, INDEX, QUAL, rMin, rMax, rWMin, rWMax, rAMin, rAMax, rVal, iStatus, iSettings) - функция генерации сообщений аналоговых параметров
-  - *PARAM as Integer - порядковый номер тега*
+```python
+  TT03_Mode.AlarmUserDefNum2 = CALL TagsAlmAnalogNewPlc( 24, 14, 0, TT03_Mode.Quality, TT03_Mode, TT03_Mode.AlarmUserDefNum2, TT03_LoLo, TT03_Lo, TT03_Hi, TT03_HiHi, TT03, TT03_Settings);
+``` 
+  
+  *TagsAlmAnalogNewPlc(PARAM, TYPE, INDEX, QUAL, rMin, rMax, rWMin, rWMax, rAMin, rAMax, rVal, iStatus, iSettings) - функция генерации сообщений аналоговых параметров*
+  - *PARAM as Integer - порядковый номер тега из массива iniTagsSource*
   - *TYPE as Integer - тип тега из генератора z*
   - *INDEX as Integer - номер столбца из типа переменной*
   - *QUAL as Integer - TT03.Quality*
