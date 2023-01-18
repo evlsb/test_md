@@ -2,6 +2,7 @@
 ```python
   iniTagsSource;12;4;1;SHSU2_2_AI1_1;Давление в трубопроводе (2.2 PT01);МПа;/pv/::DCS2_2:AI[1,1];;28;DCS2_2;503;stdPrecisionPress;5;;0;SHSU2_2_AI1_2;Температура в трубопроводе (2.2 TT01);°С;/pv/::DCS2_2:AI[1,2];;28;DCS2_2;503;stdPrecisionTemp;5;;0;SHSU2_2_AI1_3;Температура в трубопроводе (2.2 TT02);°С;/pv/::DCS2_2:AI[1,3];;28;DCS2_2;503;stdPrecisionTemp;5;;0;SHSU2_2_AI1_6;Загазованность блока (2.2AG01);%;/pv/::DCS2_2:AI[1,6];;28;DCS2_2;503;stdPrecisionTemp;5;;0;
 ``` 
+
 - iniTagsSource 
   - *sName = SAGS_XY("iniTagsSource", 0, YY);             // Префикс названия тега* 
   - *sComment = SAGS_XY("iniTagsSource", 1, YY);  // Комментарий*
@@ -16,7 +17,8 @@
   - *iDeadband = SAGS_XY("iniTagsSource", 9, YY);       // Зона неч-ти*
   - *iNumInfoMsg = SAGS_XY("iniTagsSource", 10, YY);       // Обработка инф. сигналов*
   - *sNumInfoMsg = SAGS_XY("iniTagsSource", 10, YY);       // Обработка инф. сигналов*
-- iniTagsSettingsType
+- iniTagsSettingsType (INDEX-столбец в типе переменной, ROW-строка в типе переменной, TYPE-номер типа переменной z)
+  - *sName = SAGI_XYZ("iniTagsSettingsType", INDEX, ROW, TYPE); * 
 - iniTagsBit
 - iniTagsChange
 - iniTagsInt
