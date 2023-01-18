@@ -34,7 +34,6 @@ IF SLOAD("iniTags.csv", 1 ) <> 0 THEN		stdInit = 1; ELSE	stdInit = -1; MessageBo
 ``` 
 
 ### 3. Создание скрипта TagsAlmSource01( ) в QuickFunctions  
-  
 ```python
   TT03_Mode.AlarmUserDefNum2 = CALL TagsAlmAnalogNewPlc( 24, 14, 0, TT03_Mode.Quality, TT03_Mode, TT03_Mode.AlarmUserDefNum2, TT03_LoLo, TT03_Lo, TT03_Hi, TT03_HiHi, TT03, TT03_Settings);
 ``` 
@@ -54,6 +53,11 @@ IF SLOAD("iniTags.csv", 1 ) <> 0 THEN		stdInit = 1; ELSE	stdInit = -1; MessageBo
   - *iStatus as Integer - TT03.AlarmUserDefNum2*
   - *iSettings as Integer - TT03_Settings*
 
+### 4. Вызов скрипта TagsAlmSource01( ) в Application Script (While Running)  
+*В Application Script (While Running) добавляем строчку*
+```python
+CALL TagsAlmSource01( );
+``` 
 
 
 ![Alt text](https://github.com/evlsb/test_md/blob/main/1.png?raw=true "a title")
